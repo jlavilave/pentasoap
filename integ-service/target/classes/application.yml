@@ -1,0 +1,26 @@
+server:
+    port: 8080
+    contextPath: /client
+
+security:
+    basic:
+        enabled: false
+
+config:
+    oauth2:
+        # Identificación del cliente  / Password sin encriptar (encriptación se realiza en el servidor)
+        clientID: UsrIntegracionSOAP
+        clientSecret: SOAP_int_2017 
+        
+        # URI del servidor OAuth.
+        accessTokenUri: https://oaukdcuat.liberty.cl/server/oauth/token
+        
+        # Solo requerido para grant_types distinto de client_credentials
+        userAuthorizationUri: https://oaukdcuat.liberty.cl/server/oauth/authorize
+        
+        # URI y ID del recurso (API) al cual se accederá
+        resourceURI: https://oaukdcuat.liberty.cl/resource/
+        resourceId: API-DEMO1
+        
+                
+logging.level.org.springframework.security.oauth2: DEBUG

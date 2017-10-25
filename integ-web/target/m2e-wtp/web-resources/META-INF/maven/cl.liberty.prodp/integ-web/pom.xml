@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>cl.liberty.prodp</groupId>
+    <artifactId>integ-soap-p</artifactId>
+    <version>0.0.1-testoauth2</version>
+  </parent>
+  <groupId>cl.liberty.prodp</groupId>
+  <artifactId>integ-web</artifactId>
+  <version>0.0.1-testoauth2</version>
+  <packaging>war</packaging>
+  <name>integ-web Maven Webapp</name>
+  
+  <properties>
+      <version.jersey>2.15</version.jersey>
+      <version.servlet.api>3.1.0</version.servlet.api> 
+      <resteasy.version>2.2.1.GA</resteasy.version>
+  </properties>
+  
+  <dependencies>
+ 	<dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+ 
+    <dependency>
+      <groupId>cl.liberty.prodp</groupId>
+      <artifactId>integ-commons</artifactId>
+      <version>0.0.1-testoauth2</version>
+      <scope>compile</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>cl.liberty.prodp</groupId>
+      <artifactId>integ-service</artifactId>
+      <version>0.0.1-testoauth2</version>
+      <scope>compile</scope>
+    </dependency>
+    
+    <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+        <version>${version.servlet.api}</version>
+      	<scope>provided</scope>
+    </dependency>
+    
+
+	<dependency>
+		<groupId>commons-io</groupId>
+		<artifactId>commons-io</artifactId>
+		<version>2.0.1</version>
+	</dependency>
+    
+    <dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jaxrs</artifactId>
+			<version>${resteasy.version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.jboss.resteasy</groupId>
+		<artifactId>resteasy-multipart-provider</artifactId>
+		<version>${resteasy.version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.jboss.resteasy</groupId>
+		<artifactId>resteasy-jaxb-provider</artifactId>
+		<version>${resteasy.version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.jboss.resteasy</groupId>
+		<artifactId>resteasy-jackson-provider</artifactId>
+		<version>${resteasy.version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.jboss.resteasy</groupId>
+		<artifactId>resteasy-jettison-provider</artifactId>
+		<version>${resteasy.version}</version>
+	</dependency>
+	
+  </dependencies>
+  
+  <build>
+    	<finalName>integ-web</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
+  </build>
+  
+</project>
